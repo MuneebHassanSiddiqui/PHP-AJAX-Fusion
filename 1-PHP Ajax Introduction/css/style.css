@@ -1,0 +1,109 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 100%;
+}
+
+.DeleteData {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  background-color: #ff6b6b;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.DeleteData:hover {
+  background-color: #ff4747;
+}
+
+.DeleteData:active {
+  transform: scale(0.95);
+}
+
+.DeleteData i {
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+#SaveData {
+  display: block;
+  margin: auto;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  width: 80%;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#SaveData:hover {
+  background-color: #333;
+}
+
+#SaveData:active {
+  transform: scale(0.98);
+}
+
+h1 {
+  text-align: center;
+  width: 100%;
+  background: pink;
+}
+
+table {
+  margin-top: 10px;
+}
+
+#successData {
+  background-color: #def1d8;
+  color: green;
+  padding: 10px;
+  margin: 10px;
+  display: none;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+#errorMsg {
+  background: #f5ced0;
+  color: rebeccapurple;
+  padding: 10px;
+  margin: 10px;
+  display: none;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}

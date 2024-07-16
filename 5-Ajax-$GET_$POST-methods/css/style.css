@@ -1,0 +1,78 @@
+.advanced-form {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.advanced-form h2 {
+  margin-top: 0;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.advanced-form .form-group {
+  margin-bottom: 30px;
+}
+
+.advanced-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #555;
+}
+
+.advanced-form input[type="text"],
+.advanced-form textarea,
+.advanced-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.advanced-form input[type="text"]:focus,
+.advanced-form textarea:focus,
+.advanced-form select:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+  outline: none;
+}
+
+.advanced-form button[type="button"] {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.advanced-form button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.advanced-form button[type="submit"]:active {
+  background-color: #45a049;
+  transform: translateY(2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.advanced-form .form-group:last-child {
+  margin-bottom: 40px;
+}
