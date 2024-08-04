@@ -8,7 +8,7 @@ $query = mysqli_query($conn, $mysql) or die("unsuccessfull Query" . mysqli_conne
 
 $output = "";
 if (mysqli_num_rows($query) > 0) {
-    $output .= "<table class='table table-dark table-striped'>
+    $output .= "<table border='1px solid black' width='100%' class='table table-dark table-striped'>
             <thead>
                 <tr>
                     <th scope='col'></th>
