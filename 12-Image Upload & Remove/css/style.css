@@ -1,0 +1,135 @@
+/* Import Google font - Open Sans */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #f3f4f7;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.imagesupload {
+  background: #fff;
+  border: 2px dashed #5372f0;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 60%;
+  margin-bottom: 20px;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.imagesupload:hover {
+  background: #f0f0f0;
+  border-color: #2c52ed;
+}
+
+.imagesupload input[type="file"] {
+  border: none;
+  outline: none;
+  background: #5372f0;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+.imagesupload input[type="file"]:hover {
+  background: #2c52ed;
+}
+
+.imagesupload input[type="submit"] {
+  background: #6c757d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+.imagesupload input[type="submit"]:hover {
+  background: #5c636a;
+}
+
+.prePhoto {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: none;
+}
+
+.prePhoto h1 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .imagesupload,
+  .prePhoto {
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .prePhoto h1 {
+    font-size: 1.2rem;
+  }
+}
+
+.helpBox {
+  display: inline-block;
+  margin-top: 10px;
+  background: #ff8c8c;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: background 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.helpBox:hover {
+  background: #ff7373;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.prePhoto .preview img {
+  border: 1px dotted black;
+  width: 70%;
+}
+
+.preview .deleteBtn {
+  background: #db2f2f;
+  color: #fff;
+  position: relative;
+  bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.preview .deleteBtn:hover {
+  background: #fe9b94;
+}
