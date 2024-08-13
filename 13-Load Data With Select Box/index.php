@@ -68,7 +68,7 @@
                         },
                         success: function(data) {
                             $(".Load_table").html(data);
-                        }
+                        },
                     });
 
 
