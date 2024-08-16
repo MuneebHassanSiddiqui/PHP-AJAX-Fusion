@@ -1,0 +1,95 @@
+/* Import Google font - Open Sans */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #f3f4f7;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+
+
+button {
+  background-color: #97a9f1;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #415acb;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(83, 114, 240, 0.6);
+}
+
+/* Container styling */
+.imagesupload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f3f4f6;
+    border-radius: 10px;
+    border: 2px dashed #5372f0;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Dropzone styling */
+  .dropzone {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: #3d3d3d;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease;
+  }
+  
+
+  /* Hover effect for dropzone */
+  .dropzone:hover {
+    background-color: #eef2ff;
+    border-color: #415acb;
+  }
+  
+  /* Active state for dropzone */
+  .dropzone:active {
+    background-color: #d1e3ff;
+    border-color: #415acb;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    .dropzone {
+      padding: 20px;
+      font-size: 16px;
+    }
+  }
+  
