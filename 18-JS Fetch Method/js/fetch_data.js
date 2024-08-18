@@ -5,7 +5,7 @@ function FetchData() {
         then((response) => response.json()).then((data) => {
             var tbody = document.getElementById('tbody');
             if (data['empty']) {
-                tbody.innerHTML = "<tr><td colspan='6' align='center'><h3>No Record Found!</h3></td></tbody>";
+                tbody.innerHTML = "<tr><td  align='center' colspan='6' align='center'><h3>No Record Found!</h3></td></tbody>";
             } else {
                 var tr = '';
                 for (var i in data) {
@@ -204,14 +204,53 @@ function deleteBtn(id) {
             })
     }
 }
-
-
 function hideModalE() {
     var editRecordModal = bootstrap.Modal.getInstance(document.getElementById('editRecordModal'));
     editRecordModal.hide();
 }
+//Search Term
+function searchValue() {
+    var Search_term = document.getElementById('search_data').value;
+    if (Search_term == '') {
+        FetchData();
+        return false;
+    } else {
+        fetch("php/search_data.php?search=" + Search_term).
+            then((response) => response.json()).then((data) => {
+                // console.log(data);
+                var tbody = document.getElementById('tbody');
+                if (data['empty']) {
+                    tbody.innerHTML = "<tr><td colspan='6' align='center'><h3>No Record Found!</h3></td></tbody>";
+                } else {
+                    var tr = '';
+                    for (var i in data) {
+                        tr += `<tr>
+                            <td>${data[i].sid}</td>
+                            <td>${data[i].sname}</td>
+                            <td>${data[i].cname}</td>
+                            <td>${data[i].saddress}</td>
+                            <td>${data[i].sphone}</td>
+                            <td>
+                                <button id="editBtn" onclick="editBtn(${data[i].sid})" class="btn btn-outline-primary" data-bs-toggle="modal"
+                                    data-bs-target="#editRecordModal">
+                                    <i class="ri-edit-2-fill"></i>
+                                </button>
+                                <button id="deleteBtn"  onclick="deleteBtn(${data[i].sid})" class="btn btn-outline-danger">
+                                    <i class="ri-delete-bin-5-line"></i>
+                                </button>
+                            </td>
+                        </tr>`;
+                    }
+                    tbody.innerHTML = tr;
+                }
+            })
+            .catch((error) => {
+                show_message("error", "Can't Fetch Data❌")
+            })
 
+    }
 
+}
 
 addNewRecord();
 FetchData();

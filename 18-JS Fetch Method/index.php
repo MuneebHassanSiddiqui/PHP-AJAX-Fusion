@@ -168,7 +168,7 @@
 <body>
     <h1>JavaScript Fetch Method</h1>
     <div class="main">
-        <input type="search" name="Search" id="search_data" class="form-control mb-3" placeholder="Search records...">
+        <input type="search" name="Search" id="search_data" onkeyup="searchValue()" class="form-control mb-3" placeholder="Search records...">
         <button id="New_Record_btn" class="btn btn-primary" onclick="addNewRecord()" data-bs-toggle="modal" data-bs-target="#addRecordModal">Add
             New Record</button>
 
