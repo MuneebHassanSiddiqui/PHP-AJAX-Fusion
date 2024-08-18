@@ -27,6 +27,54 @@
         right: 5%;
         display: none;
     }
+
+    h1 {
+        font-size: 2.5rem;
+        text-align: center;
+        background: linear-gradient(45deg, #5372F0, #FF6F61);
+        -webkit-background-clip: text;
+        color: transparent;
+        padding: 15px;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: bold;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    h1:hover {
+        transform: scale(1.05);
+    }
+
+    .imagesupload {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        background-color: #f3f4f6;
+        border-radius: 10px;
+        border: 2px dashed #5372f0;
+        width: 100%;
+        max-width: 50%;
+        margin: 0 auto;
+        transition: border-color 0.3s ease;
+    }
+    .dropzone {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 8px;
+        width: 100%;
+        max-width: 900px;
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        color: #3d3d3d;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
 </style>
 
 <body>
@@ -54,8 +102,14 @@
             success: function(file, response) {
                 if (response == 'true') {
                     $(".success-message").html("Image Upload Successfully!✔").slideDown();
+                    setTimeout(function() {
+                        $(".success-message").html("Image Upload Successfully!✔").slideUp();
+                    }, 2000)
                 } else {
-                    $(".error-message").html("Image Not Upload Successfully!❌").slideDown();
+                    $(".error-message").html("Image not upload❌").slideDown();
+                    setTimeout(function() {
+                        $(".error-message").html("Image not upload❌").slideUp();
+                    }, 2000)
                 }
             }
         });
